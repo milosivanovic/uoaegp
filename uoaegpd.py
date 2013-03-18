@@ -203,7 +203,7 @@ class Poller(object):
 				sys.stdout.write('No change.')
 				sys.stdout.flush()
 				time.sleep(1)
-				sys.stdout.write('\r                      ')
+				sys.stdout.write('\r'.ljust(23))
 		if not pending:
 				self._log("All grades released; job done.", -1)
 				self._quit()
